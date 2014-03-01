@@ -10,18 +10,24 @@ else{
 }
 
 $(document).ready(function(){
-  $("#setSizeButton").click(function(){
+  $("#increaseSizeButton").click(function(){
     chrome.tabs.executeScript(null, {file: "increaseText.js"});
     console.log("clicked button");
   });
-});
 
-$(document).ready(function(){
+
   $("#resetSizeButton").click(function(){
     chrome.tabs.executeScript(null, {file: "resetText.js"});
     console.log("clicked button");
   });
+
+
+  $("#reduceSizeButton").click(function(){
+    chrome.tabs.executeScript(null, {file: "reduceText.js"});
+    console.log("clicked button");
+  });
 });
+
 
 
   /*

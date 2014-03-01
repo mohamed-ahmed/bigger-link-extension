@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 function resetTextSize(link){
   link.style.fontSize = "";
-  console.log("resetting")
+  console.log("resetting");
   console.log(link.style.fontSize);
 }
 
@@ -61,15 +61,5 @@ function readCookie(name) {
   */
 function eraseCookie(name) {
   createCookie(name,"",-1);
-}
-
-function increaseTextSize(link){
-  link.style.fontSize = linkTextSize + "px";
-}
-
-function iterateThroughLinks(){
-  for(var i = 0; i < document.links.length ; i++){
-    increaseTextSize(document.links[i]);
-  }
 }
 

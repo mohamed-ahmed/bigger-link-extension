@@ -1,9 +1,9 @@
-var linkTextSize = 15;
+var linkTextSize = 12;
 
 $(document).ready(function(){
-    console.log("increaseText.js called");
+    console.log("reduceText.js called");
     if(readCookie("linkTextSize")){
-	  linkTextSize = parseInt(readCookie("linkTextSize")) * 1.25;
+	  linkTextSize = parseInt(readCookie("linkTextSize")) / 1.25;
 	}
   iterateThroughLinks();
   createCookie("linkTextSize", linkTextSize);
@@ -11,16 +11,16 @@ $(document).ready(function(){
 
 
 
-function increaseTextSize(link){
+function reduceTextSize(link){
   link.style.fontSize = linkTextSize + "px";
 }
 
 function iterateThroughLinks(){
-	console.log("increasing text size")
+	console.log("reducing text size")
 	for(var i = 0; i < document.links.length ; i++){
-		increaseTextSize(document.links[i]);
+		reduceTextSize(document.links[i]);
 	}
-	linkTextSize = linkTextSize * 1.25;
+	linkTextSize = linkTextSize / 1.25;
 }
 
 
@@ -64,4 +64,5 @@ function readCookie(name) {
 function eraseCookie(name) {
   createCookie(name,"",-1);
 }
+
 

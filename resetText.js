@@ -1,30 +1,28 @@
 console.log(window.location.toString());
-var linkTextSize;
 
-if(readCookie("linkTextSize")){
-  linkTextSize = parseInt(readCookie("linkTextSize"));
+$(document).ready(function(){
+  console.log("resetText.js called");
   iterateThroughLinks();
-}
-else{
-  createCookie("linkTextSize","15");
-}
-
-$(document).ready(function(){
-  $("#setSizeButton").click(function(){
-    chrome.tabs.executeScript(null, {file: "increaseText.js"});
-    console.log("clicked button");
-  });
-});
-
-$(document).ready(function(){
-  $("#resetSizeButton").click(function(){
-    chrome.tabs.executeScript(null, {file: "resetText.js"});
-    console.log("clicked button");
-  });
+  eraseCookie("linkTextSize");
 });
 
 
-  /*
+
+function resetTextSize(link){
+  link.style.fontSize = "";
+  console.log("resetting")
+  console.log(link.style.fontSize);
+}
+
+function iterateThroughLinks(){
+  console.log("iterating through links");
+	for(var i = 0; i < document.links.length ; i++){
+		resetTextSize(document.links[i]);
+	}
+}
+
+
+ /*
   creates cookies
   @param {String} name -  of coookie
   @param {String} valie - value of coookie

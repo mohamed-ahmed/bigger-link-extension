@@ -1,7 +1,7 @@
 var linkTextSize = 15;
 
 $(document).ready(function(){
-    console.log("modifyText.js called");
+    console.log("increaseText.js called");
     if(readCookie("linkTextSize")){
 	  linkTextSize = parseInt(readCookie("linkTextSize")) * 1.25;
 	}
@@ -16,6 +16,7 @@ function increaseTextSize(link){
 }
 
 function iterateThroughLinks(){
+	alert("increasing text size")
 	for(var i = 0; i < document.links.length ; i++){
 		increaseTextSize(document.links[i]);
 	}

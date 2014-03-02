@@ -1,3 +1,7 @@
+console.log("increaseText.js: ");
+console.log(window.location.toString());
+
+
 var linkTextSize = 15;
 
 $(document).ready(function(){

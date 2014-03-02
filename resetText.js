@@ -10,7 +10,6 @@ $(document).ready(function(){
 
 function resetTextSize(link){
   link.style.fontSize = "";
-  console.log("resetting");
   console.log(link.style.fontSize);
 }
 

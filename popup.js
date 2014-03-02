@@ -1,3 +1,8 @@
+console.log("popup.js");
+
+console.log("linkTextSize: ");
+console.log(readCookie("linkTextSize"));
+
 console.log(window.location.toString());
 var linkTextSize;
 
@@ -5,9 +10,9 @@ if(readCookie("linkTextSize")){
   linkTextSize = parseInt(readCookie("linkTextSize"));
   iterateThroughLinks();
 }
-else{
+/*else{
   createCookie("linkTextSize","15");
-}
+}*/
 
 $(document).ready(function(){
   $("#increaseSizeButton").click(function(){

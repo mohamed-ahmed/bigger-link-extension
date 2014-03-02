@@ -7,12 +7,11 @@
 
   "author" : "Mohamed Ahmed - mohamed.ahmed@live.ca",
 
-  /*"default_locale": "en",*/
   "icons": {
     "19": "extension_icon_new_19.png",
     "48": "extension_icon_new_48.png",
     "128": "extension_icon_new_128.png"
-   },
+  },
 
   "permissions": [
     "tabs", "<all_urls>"],

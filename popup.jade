@@ -8,7 +8,12 @@ html
     link(rel="stylesheet", type="text/css", href="style.css")
 
   body
-    input(id="increaseSizeButton", type="image", src="bigger-link-button.png", title="Make links bigger")
-    input(id="resetSizeButton", type="image", src="reset-link-button.png", title="Reset link size")
-    input(id="reduceSizeButton", type="image", src="smaller-link-button.png", title="Make links smaller")
+    div(id="increaseSizeButton", class="size-button", title="Make links bigger")
+      img(id="up-arrow", src="up_arrow_icon.png")
+
+    div(id="resetSizeButton", class="size-button", title="Reset link size")
+      img(id="reset-arrow", src="reset_arrow_icon.png")
+    
+    div(id="reduceSizeButton", class="size-button", title="Make links smaller")
+      img(id="down-arrow", src="down_arrow_icon.png")
 
